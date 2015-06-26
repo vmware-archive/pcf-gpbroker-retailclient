@@ -1,0 +1,13 @@
+*/.classpath
+*/.project
+*/.settings
+*/.springBeans
+*/.gradle
+*/*/.classpath
+*/*/.project
+*/*/.settings
+*/*/.springBeans
+*/*/.gradle
+greenplum-service-broker/bin/*
+retaildata-client/retaildata-connector/target
+retaildata-client/retaildata-ui/target

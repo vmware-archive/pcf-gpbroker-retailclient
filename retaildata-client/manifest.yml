@@ -1,0 +1,9 @@
+---
+applications:
+- name: retaildata-client
+  memory: 512M
+  instances: 1
+  path: retaildata-ui/target/retaildata-ui-0.0.1-SNAPSHOT.jar
+  services: [ mydb ]
+  env:
+    SPRING_PROFILES_ACTIVE: cloud

@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e -x
+
+RETAILDATA_CLIENT_HOME=$(dirname $0)/..
+CF_APPS=$(cf apps)
+EXPECTED_APP_STATUS="started"
+
+cf create-security-group greenplum $RETAILDATA_CLIENT_HOME/rule.json
+
+cf bind-running-security-group greenplum
+
+if [[ "$(echo "$CF_APPS" | grep retaildata-client)" == *"$EXPECTED_APP_STATUS"* ]]; then
+  cf restage retaildata-client
+fi

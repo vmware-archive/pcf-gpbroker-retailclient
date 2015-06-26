@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>pivotal.retaildata</groupId>
+		<artifactId>retaildata-client</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>retaildata-connector</artifactId>
+	<name>retaildata-connector</name>
+	<description>Spring Cloud Connector for Greenplum/HAWQ</description>
+
+<!-- 
+Download from network.pivotal.io and import in you local repo
+mvn install:install-file -Dfile=./greenplum.jar -DgroupId=pivotal.greenplum -DartifactId=io.pivotal -Dversion=5.1.1 -Dpackaging=jar
+ -->
+	<dependencies>
+		<dependency>
+			<groupId>pivotal.greenplum</groupId>
+			<artifactId>io.pivotal</artifactId>
+			<version>5.1.1</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
