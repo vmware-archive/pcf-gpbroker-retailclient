@@ -17,11 +17,6 @@ public class DefaultConfiguration {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.pivotal.jdbc.GreenplumDriver");
 		dataSource.setUrl("jdbc:pivotal:greenplum://10.68.58.123:5432;DatabaseName=test;user=gpadmin");
-
-		JdbcTemplate template = new JdbcTemplate(dataSource);
-		template.execute("drop table if exists retail_demo.tweet_data");
-		template.execute("create table retail_demo.tweet_data (id bigserial, created_at varchar(500), sentiment integer, tweet varchar(500))");
-
         return dataSource;  
     }  
 }
