@@ -1,4 +1,4 @@
-# pcf-gpbroker-retailclient
+<h1> VMware has ended active development of this project, this repository will no longer be updated.</h1><br># pcf-gpbroker-retailclient
 Project Summary:
 - Pivotal CF Client App and Service Broker Example
 - Service Broker to provide Greenplum/Hawq Connection Information to the Client App
